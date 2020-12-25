@@ -1,0 +1,66 @@
+song@song-VirtualBox:~$ sudo ./app_oslab 
+push: 1
+push: 2
+push: 3
+pop: 3
+pop: 2
+pop: 1
+push: 1
+push: 2
+push: 2
+song@song-VirtualBox:~$ 
+
+song@song-VirtualBox:~$ sudo dmesg
+...(Áß·«)...
+[   99.304725] [System Call] oslab_push(): 
+[   99.304726] push 1
+[   99.304727] Stack Top -----------------
+[   99.304728] 1
+[   99.304728] Stack Bottom --------------
+[   99.304787] [System Call] oslab_push(): 
+[   99.304806] push 2
+[   99.304806] Stack Top -----------------
+[   99.304807] 2
+[   99.304807] 1
+[   99.304808] Stack Bottom --------------
+[   99.304810] [System Call] oslab_push(): 
+[   99.304810] push 3
+[   99.304811] Stack Top -----------------
+[   99.304811] 3
+[   99.304811] 2
+[   99.304812] 1
+[   99.304812] Stack Bottom --------------
+[   99.304814] [System Call] oslab_pop(): 
+[   99.304814] pop 3
+[   99.304815] Stack Top -----------------
+[   99.304815] 2
+[   99.304816] 1
+[   99.304816] Stack Bottom --------------
+[   99.304818] [System Call] oslab_pop(): 
+[   99.304818] pop 2
+[   99.304819] Stack Top -----------------
+[   99.304819] 1
+[   99.304819] Stack Bottom --------------
+[   99.304821] [System Call] oslab_pop(): 
+[   99.304821] pop 1
+[   99.304822] Stack Top -----------------
+[   99.304822] Stack Bottom --------------
+[   99.304824] [System Call] oslab_push(): 
+[   99.304824] push 1
+[   99.304825] Stack Top -----------------
+[   99.304825] 1
+[   99.304825] Stack Bottom --------------
+[   99.304827] [System Call] oslab_push(): 
+[   99.304828] push 2
+[   99.304828] Stack Top -----------------
+[   99.304828] 2
+[   99.304842] 1
+[   99.304843] Stack Bottom --------------
+[   99.304845] [System Call] oslab_push(): 
+[   99.304845] Push 2
+[   99.304846] element overlap
+[   99.304846] Stack Top -----------------
+[   99.304846] 2
+[   99.304847] 1
+[   99.304847] Stack Bottom --------------
+song@song-VirtualBox:~$ 
